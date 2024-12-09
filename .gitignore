@@ -1,0 +1,15 @@
+# Configuratie bestanden
+config.js
+.env
+.env.local
+
+# OS bestanden
+.DS_Store
+Thumbs.db
+
+# IDE bestanden
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/ 

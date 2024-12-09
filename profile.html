@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Mijn Profiel | LeadFinder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <h1>LeadFinder</h1>
+                <a href="dashboard.html" class="btn-nav">
+                    <i class="fas fa-search"></i> Zoeken
+                </a>
+                <a href="saved.html" class="btn-nav">
+                    <i class="fas fa-heart"></i> Opgeslagen
+                </a>
+            </div>
+            <div class="nav-links">
+                <span id="userName"></span>
+                <a href="profile.html" class="btn-nav">
+                    <i class="fas fa-user"></i> Profiel
+                </a>
+                <a href="admin.html" class="btn-admin" id="adminButton" style="display: none;">
+                    <i class="fas fa-shield-alt"></i> Admin
+                </a>
+                <button onclick="logout()" class="btn-logout">Uitloggen</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <h2>Mijn Profiel</h2>
+        <div class="profile-container">
+            <div class="profile-section">
+                <h3>Persoonlijke Informatie</h3>
+                <form id="profileForm">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Naam</label>
+                        <input type="text" id="profileName" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> E-mailadres</label>
+                        <input type="email" id="profileEmail" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-building"></i> Bedrijfsnaam</label>
+                        <input type="text" id="profileCompany">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Telefoonnummer</label>
+                        <input type="tel" id="profilePhone">
+                    </div>
+                    <button type="submit" class="btn">Opslaan</button>
+                </form>
+            </div>
+            
+            <div class="profile-section">
+                <h3>Statistieken</h3>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-search"></i>
+                        <span id="userSearchCount">0</span>
+                        <label>Zoekopdrachten</label>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-heart"></i>
+                        <span id="userSavedCount">0</span>
+                        <label>Opgeslagen</label>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="userJoinDate">-</span>
+                        <label>Lid sinds</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

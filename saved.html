@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opgeslagen Bedrijven | Mijn App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <h1>LeadFinder</h1>
+                <a href="dashboard.html" class="btn-nav">
+                    <i class="fas fa-search"></i> Zoeken
+                </a>
+            </div>
+            <div class="nav-links">
+                <span id="userName"></span>
+                <a href="profile.html" class="btn-nav">
+                    <i class="fas fa-user"></i> Profiel
+                </a>
+                <a href="admin.html" class="btn-admin" id="adminButton" style="display: none;">
+                    <i class="fas fa-shield-alt"></i> Admin
+                </a>
+                <button onclick="logout()" class="btn-logout">Uitloggen</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <h2>Opgeslagen Bedrijven</h2>
+        <div class="results-container">
+            <div id="savedResults" class="company-grid">
+                <!-- Opgeslagen bedrijven worden hier dynamisch toegevoegd -->
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

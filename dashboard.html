@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Mijn App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <h1>LeadFinder</h1>
+                <a href="saved.html" class="btn-nav">
+                    <i class="fas fa-heart"></i> Opgeslagen
+                </a>
+            </div>
+            <div class="nav-links">
+                <span id="userName"></span>
+                <a href="profile.html" class="btn-nav">
+                    <i class="fas fa-user"></i> Profiel
+                </a>
+                <a href="admin.html" class="btn-admin" id="adminButton" style="display: none;">
+                    <i class="fas fa-shield-alt"></i> Admin
+                </a>
+                <button onclick="logout()" class="btn-logout">Uitloggen</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <h2>Bedrijven Zoeken</h2>
+        
+        <div class="search-container">
+            <form id="searchForm">
+                <div class="search-filters">
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Locatie</label>
+                        <input type="text" id="location" placeholder="Bijv. Amsterdam" class="search-input">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-compass"></i> Radius</label>
+                        <select id="radius" class="search-input">
+                            <option value="5">5 km</option>
+                            <option value="10">10 km</option>
+                            <option value="25">25 km</option>
+                            <option value="50">50 km</option>
+                        </select>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="noWebsite">
+                            <span class="checkbox-text">
+                                <i class="fas fa-globe"></i> Alleen bedrijven zonder website
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn search-btn">
+                        <i class="fas fa-search"></i> Zoeken
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="results-container">
+            <div id="searchResults" class="company-grid">
+                <!-- Resultaten worden hier dynamisch toegevoegd -->
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

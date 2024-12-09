@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | LeadFinder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <h1>LeadFinder</h1>
+                <a href="dashboard.html" class="btn-nav">
+                    <i class="fas fa-search"></i> Zoeken
+                </a>
+                <a href="saved.html" class="btn-nav">
+                    <i class="fas fa-heart"></i> Opgeslagen
+                </a>
+            </div>
+            <div class="nav-links">
+                <span id="userName"></span>
+                <a href="profile.html" class="btn-nav">
+                    <i class="fas fa-user"></i> Profiel
+                </a>
+                <a href="admin.html" class="btn-admin" id="adminButton" style="display: none;">
+                    <i class="fas fa-shield-alt"></i> Admin
+                </a>
+                <button onclick="logout()" class="btn-logout">Uitloggen</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="dashboard-container">
+        <h2>Admin Dashboard</h2>
+        <div class="admin-stats">
+            <div class="stat-card">
+                <h3>Totaal Gebruikers</h3>
+                <p id="totalUsers">1</p>
+            </div>
+            <div class="stat-card">
+                <h3>Totaal Zoekopdrachten</h3>
+                <p id="totalSearches">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Totaal Opgeslagen</h3>
+                <p id="totalSaved">0</p>
+            </div>
+        </div>
+        
+        <div class="activity-log">
+            <h3>Gebruikers Activiteit</h3>
+            <div id="activityLog" class="activity-container">
+                <!-- Activiteiten worden hier dynamisch toegevoegd -->
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
