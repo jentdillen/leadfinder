@@ -2,7 +2,7 @@
 let isLoggedIn = false;
 
 // Voeg deze constante toe bovenaan het script
-const ADMIN_EMAILS = CONFIG.ADMIN_EMAILS;
+const ADMIN_EMAILS = ['admin@leadfinder.nl', 'jent@leadfinder.nl'];
 
 // Testdata voor bedrijven
 const testCompanies = [
@@ -215,11 +215,17 @@ if (document.getElementById('loginForm')) {
         e.preventDefault();
         const loginEmail = e.target.elements[0].value;
         
+        console.log('Login poging voor:', loginEmail);
+        
         // Haal alle gebruikers op
         const users = JSON.parse(localStorage.getItem('users') || '[]');
+        console.log('Gevonden gebruikers:', users);
+        
         const user = users.find(u => u.email === loginEmail);
+        console.log('Gevonden gebruiker:', user);
         
         if (user) {
+            console.log('Login succesvol');
             isLoggedIn = true;
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('currentUser', JSON.stringify(user));
@@ -228,6 +234,7 @@ if (document.getElementById('loginForm')) {
             localStorage.setItem('isAdmin', isAdmin);
             window.location.href = 'dashboard.html';
         } else {
+            console.log('Gebruiker niet gevonden');
             alert('E-mailadres niet gevonden. Registreer eerst een account.');
             window.location.href = 'register.html';
         }
@@ -241,10 +248,14 @@ if (document.getElementById('registerForm')) {
         const userName = e.target.elements[0].value;
         const email = e.target.elements[1].value;
         
+        console.log('Registratie poging voor:', email, userName);
+        
         if (addUser(userName, email)) {
+            console.log('Registratie succesvol');
             alert('Account succesvol aangemaakt! Je kunt nu inloggen.');
             window.location.href = 'index.html';
         } else {
+            console.log('Registratie mislukt - email bestaat al');
             alert('Dit e-mailadres is al geregistreerd. Probeer in te loggen.');
             window.location.href = 'index.html';
         }
