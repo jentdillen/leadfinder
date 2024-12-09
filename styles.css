@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -766,4 +767,318 @@ input:focus {
   .company-card {
     margin-bottom: 15px; /* Extra ruimte voor touch scrolling */
   }
+}
+
+/* Base mobile styles (voor kleine schermen) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Navbar mobile styling */
+.navbar {
+    width: 100%;
+    padding: 10px;
+}
+
+.nav-content {
+    flex-direction: column;
+    padding: 10px;
+}
+
+.nav-left {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.nav-left h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-nav, .btn-admin, .btn-logout {
+    width: 100%;
+    padding: 12px;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Search container mobile styling */
+.search-container {
+    padding: 15px;
+}
+
+.search-filters {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.search-input {
+    height: 44px;
+    font-size: 16px;
+}
+
+/* Company cards mobile styling */
+.company-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+}
+
+.company-card {
+    padding: 15px;
+}
+
+.footer-buttons {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-website, .btn-more-info {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+}
+
+/* Modal mobile styling */
+.modal-content {
+    width: 95%;
+    margin: 10px;
+    max-height: 85vh;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+    .nav-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-left {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .btn-nav, .btn-admin, .btn-logout {
+        width: auto;
+    }
+
+    .company-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-buttons {
+        flex-direction: row;
+    }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+    .company-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dashboard-container {
+        margin: 40px auto;
+        max-width: 1200px;
+    }
+
+    .search-filters {
+        flex-direction: row;
+    }
+}
+
+/* Fix voor iOS input zoom */
+input, select, textarea {
+    font-size: 16px !important;
+}
+
+/* Verbeterde touch targets */
+button, 
+.btn, 
+.btn-nav, 
+.btn-admin, 
+.btn-logout,
+.favorite-btn,
+input[type="checkbox"] {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Fix voor iOS momentum scrolling */
+.modal-content,
+.dashboard-container {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Verbeterde contrast en leesbaarheid op mobile */
+.company-info,
+.activity-time,
+.stat-item label {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Fix voor kleine schermen login/register */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+
+/* Voeg deze meta tag toe aan alle HTML bestanden in de <head> sectie */
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+/* Bestaande CSS behouden, alleen deze media queries toevoegen/aanpassen */
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn-nav, .btn-admin, .btn-logout {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Search */
+    .search-filters {
+        flex-direction: column;
+    }
+
+    .search-filters .form-group {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    /* Company cards */
+    .company-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .company-card {
+        margin-bottom: 15px;
+    }
+
+    .footer-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-website, .btn-more-info {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Profile */
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Admin */
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Container */
+    .container {
+        padding: 10px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    /* Dashboard */
+    .dashboard-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* iOS fixes */
+@supports (-webkit-touch-callout: none) {
+    input, select, textarea {
+        font-size: 16px !important; /* Voorkomt zoom op iOS */
+    }
+
+    .modal-content,
+    .dashboard-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .btn, 
+    .btn-nav, 
+    .btn-admin, 
+    .btn-logout,
+    .favorite-btn,
+    input[type="checkbox"] {
+        min-height: 44px;
+    }
 } 

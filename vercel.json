@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/dashboard", "dest": "/dashboard.html" },
+    { "src": "/admin", "dest": "/admin.html" },
+    { "src": "/saved", "dest": "/saved.html" },
+    { "src": "/profile", "dest": "/profile.html" },
+    { "src": "/register", "dest": "/register.html" }
+  ]
+} 
