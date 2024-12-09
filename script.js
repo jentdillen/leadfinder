@@ -694,19 +694,4 @@ document.addEventListener('DOMContentLoaded', function() {
     checkAuth();
     loadUserProfile(); // Laad profielgegevens als we op de profielpagina zijn
 });
-
-// Hamburger menu functionaliteit
-function toggleMenu() {
-    const navMenu = document.getElementById('navMenu');
-    navMenu.classList.toggle('active');
-}
-
-// Sluit menu als er buiten wordt geklikt
-document.addEventListener('click', function(event) {
-    const navMenu = document.getElementById('navMenu');
-    const hamburgerBtn = document.querySelector('.hamburger-btn');
-    
-    if (!navMenu.contains(event.target) && !hamburgerBtn.contains(event.target)) {
-        navMenu.classList.remove('active');
-    }
-}); 
+ 
