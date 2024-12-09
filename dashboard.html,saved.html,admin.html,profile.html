@@ -2,27 +2,25 @@
     <div class="nav-content">
         <div class="nav-left">
             <h1>LeadFinder</h1>
-        </div>
-        <button class="hamburger-btn" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-menu" id="navMenu">
             <a href="dashboard.html" class="btn-nav">
                 <i class="fas fa-search"></i> Zoeken
             </a>
             <a href="saved.html" class="btn-nav">
                 <i class="fas fa-heart"></i> Opgeslagen
             </a>
-            <div class="nav-links">
-                <span id="userName"></span>
-                <a href="profile.html" class="btn-nav">
-                    <i class="fas fa-user"></i> Profiel
-                </a>
-                <a href="admin.html" class="btn-admin" id="adminButton" style="display: none;">
-                    <i class="fas fa-shield-alt"></i> Admin
-                </a>
-                <button onclick="logout()" class="btn-logout">Uitloggen</button>
-            </div>
+        </div>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navMenu">
+            <span id="userName"></span>
+            <a href="profile.html" class="btn-nav">
+                <i class="fas fa-user"></i> Profiel
+            </a>
+            <a href="admin.html" class="btn-admin" id="adminButton" style="display: none;">
+                <i class="fas fa-shield-alt"></i> Admin
+            </a>
+            <button onclick="logout()" class="btn-logout">Uitloggen</button>
         </div>
     </div>
 </nav> 
