@@ -1,7 +1,7 @@
 // Simpele authenticatie simulatie
 let isLoggedIn = false;
 
-// Voeg deze constante toe bovenaan het script
+// Admin emails direct in script
 const ADMIN_EMAILS = ['admin@leadfinder.nl', 'jent@leadfinder.nl'];
 
 // Testdata voor bedrijven
