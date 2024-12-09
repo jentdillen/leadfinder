@@ -635,4 +635,135 @@ input:focus {
     .profile-container {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 1024px) {
+  .company-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .dashboard-container {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar responsiveness */
+  .nav-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Search container */
+  .search-filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-filters .form-group {
+    width: 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  /* Company cards */
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Modal responsiveness */
+  .modal-content {
+    width: 95%;
+    margin: 10px;
+  }
+
+  /* Admin dashboard */
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small devices */
+  .form-container {
+    padding: 20px;
+  }
+
+  .nav-content {
+    padding: 0 10px;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-nav, .btn-admin, .btn-logout {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Company card footer */
+  .footer-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-website, .btn-more-info {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Profile page */
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fix voor iOS Safari input styling */
+@supports (-webkit-touch-callout: none) {
+  input, select {
+    font-size: 16px; /* Voorkomt zoom op iOS */
+  }
+}
+
+/* Verbeterde touch targets voor mobile */
+@media (hover: none) {
+  .btn, 
+  .btn-nav, 
+  .btn-admin, 
+  .btn-logout,
+  .favorite-btn {
+    min-height: 44px; /* Minimum touch target size */
+  }
+
+  .company-card {
+    margin-bottom: 15px; /* Extra ruimte voor touch scrolling */
+  }
 } 
